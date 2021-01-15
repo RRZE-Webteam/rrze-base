@@ -1,0 +1,54 @@
+{
+    "packages": [
+        {
+            "name": "rrze/wp",
+            "version": "0.1.0",
+            "version_normalized": "0.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RRZE-Webteam/rrze-wp.git",
+                "reference": "2fbaa059b4749123e1515f8fccb89fff181fe9f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RRZE-Webteam/rrze-wp/zipball/2fbaa059b4749123e1515f8fccb89fff181fe9f9",
+                "reference": "2fbaa059b4749123e1515f8fccb89fff181fe9f9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "time": "2021-01-15T14:41:10+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "RRZE\\WP\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Rolf v. d. Forst",
+                    "email": "rolf.v.d.forst@fau.de",
+                    "homepage": "https://www.rrze.fau.de"
+                }
+            ],
+            "description": "A general purpose library for WordPress.",
+            "homepage": "https://github.com/RRZE-Webteam/rrze-wp",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/RRZE-Webteam/rrze-wp/issues",
+                "source": "https://github.com/RRZE-Webteam/rrze-wp/tree/0.1.0"
+            },
+            "install-path": "../rrze/wp"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
