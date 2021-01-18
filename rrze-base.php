@@ -4,7 +4,7 @@
 Plugin Name:     RRZE Base
 Plugin URI:      https://gitlab.rrze.fau.de/rrze-webteam/rrze-base
 Description:     Base template for WordPress plugins.
-Version:         0.1.0
+Version:         0.1.1
 Author:          RRZE Webteam
 Author URI:      https://blogs.fau.de/webworking/
 License:         GNU General Public License v2
@@ -21,11 +21,9 @@ const RRZE_PHP_VERSION = '7.4';
 const RRZE_WP_VERSION  = '5.6';
 
 /**
- * Composer autoload (optional)
+ * Composer autoload
  */
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    require_once __DIR__ . '/vendor/autoload.php';
-}
+require_once __DIR__ . '/vendor/autoload.php';
 
 /**
  * SPL Autoloader (PSR-4).
