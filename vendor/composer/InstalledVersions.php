@@ -24,33 +24,33 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => '961f52526d0ef4f2ec24969284957ee62a8281bf',
+    'reference' => '4430d5c97a1a4a9cdfcaed9facf033b3c5d1be35',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => '961f52526d0ef4f2ec24969284957ee62a8281bf',
+      'reference' => '4430d5c97a1a4a9cdfcaed9facf033b3c5d1be35',
     ),
     'rrze/wp' => 
     array (
-      'pretty_version' => '0.1.0',
-      'version' => '0.1.0.0',
+      'pretty_version' => '0.1.1',
+      'version' => '0.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2fbaa059b4749123e1515f8fccb89fff181fe9f9',
+      'reference' => 'cdbe4d1a4cbd33238e4772e1a9890d8beb55fe26',
     ),
   ),
 );
