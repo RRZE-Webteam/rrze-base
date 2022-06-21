@@ -15,6 +15,6 @@ class Main
      */
     public function __construct()
     {
-        \RRZE\WP\I18n::loadTextdomain();
+        //
     }
 }
