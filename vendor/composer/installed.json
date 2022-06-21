@@ -2,23 +2,23 @@
     "packages": [
         {
             "name": "rrze/wp",
-            "version": "0.1.1",
-            "version_normalized": "0.1.1.0",
+            "version": "0.1.2",
+            "version_normalized": "0.1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RRZE-Webteam/rrze-wp.git",
-                "reference": "cdbe4d1a4cbd33238e4772e1a9890d8beb55fe26"
+                "reference": "0c3d92b14033cd7a4dbc6148789ccd7ced8b11da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RRZE-Webteam/rrze-wp/zipball/cdbe4d1a4cbd33238e4772e1a9890d8beb55fe26",
-                "reference": "cdbe4d1a4cbd33238e4772e1a9890d8beb55fe26",
+                "url": "https://api.github.com/repos/RRZE-Webteam/rrze-wp/zipball/0c3d92b14033cd7a4dbc6148789ccd7ced8b11da",
+                "reference": "0c3d92b14033cd7a4dbc6148789ccd7ced8b11da",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4"
             },
-            "time": "2021-01-18T08:26:55+00:00",
+            "time": "2022-06-21T14:11:26+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -44,7 +44,7 @@
             ],
             "support": {
                 "issues": "https://github.com/RRZE-Webteam/rrze-wp/issues",
-                "source": "https://github.com/RRZE-Webteam/rrze-wp/tree/0.1.1"
+                "source": "https://github.com/RRZE-Webteam/rrze-wp/tree/0.1.2"
             },
             "install-path": "../rrze/wp"
         }
