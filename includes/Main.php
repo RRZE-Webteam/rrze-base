@@ -25,13 +25,13 @@ class Main
     {
         wp_register_style(
             'rrze-base',
-            plugins_url('css/rrze-base.css', plugin()->getBasename()),
+            plugins_url('assets/css/rrze-base.css', plugin()->getBasename()),
             [],
             plugin()->getVersion(true)
         );
         wp_register_script(
             'rrze-base',
-            plugins_url('js/rrze-base.js', plugin()->getBasename()),
+            plugins_url('assets/js/rrze-base.js', plugin()->getBasename()),
             ['jquery'],
             plugin()->getVersion(true)
         );
