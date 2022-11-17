@@ -1,3 +1,3 @@
 # RRZE Base
 
-Base template for WordPress plugins.
+Base template for RRZE WordPress plugins.
