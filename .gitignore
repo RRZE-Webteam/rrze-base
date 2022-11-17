@@ -1,1 +1,11 @@
-composer.lock
+### vscode ###
+.vscode/
+### NetBeans ###
+**/nbproject/
+### PhpStorm ###
+.idea/
+### macOS ###
+.DS_Store
+### Node ###
+node_modules/
+_tmp/
