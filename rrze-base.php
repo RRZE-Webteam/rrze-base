@@ -4,7 +4,7 @@
 Plugin Name:     RRZE Base
 Plugin URI:      https://gitlab.rrze.fau.de/rrze-webteam/rrze-base
 Description:     Base template for WordPress plugins.
-Version:         0.1.2
+Version:         1.0.0
 Author:          RRZE Webteam
 Author URI:      https://blogs.fau.de/webworking/
 License:         GNU General Public License v2
@@ -32,7 +32,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 spl_autoload_register(function ($class) {
     $prefix = __NAMESPACE__;
-    $baseDir = __DIR__ . '/includes/';
+    $base_dir = __DIR__ . '/includes/';
 
     $len = strlen($prefix);
     if (strncmp($prefix, $class, $len) !== 0) {
@@ -40,7 +40,7 @@ spl_autoload_register(function ($class) {
     }
 
     $relativeClass = substr($class, $len);
-    $file = $baseDir . str_replace('\\', '/', $relativeClass) . '.php';
+    $file = $base_dir . str_replace('\\', '/', $relativeClass) . '.php';
 
     if (file_exists($file)) {
         require $file;
@@ -54,11 +54,15 @@ register_deactivation_hook(__FILE__, __NAMESPACE__ . '\deactivation');
 add_action('plugins_loaded', __NAMESPACE__ . '\loaded');
 
 /**
- * Loads a plugin’s translated strings.
+ * loadTextdomain
  */
 function loadTextdomain()
 {
-    load_plugin_textdomain('rrze-base', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    load_plugin_textdomain(
+        'rrze-base',
+        false,
+        sprintf('%s/languages/', dirname(plugin_basename(__FILE__)))
+    );
 }
 
 /**
@@ -67,19 +71,23 @@ function loadTextdomain()
  */
 function systemRequirements(): string
 {
+    global $wp_version;
+    // Strip off any -alpha, -RC, -beta, -src suffixes.
+    list($wpVersion) = explode('-', $wp_version);
+    $phpVersion = phpversion();
     $error = '';
-    if (version_compare(PHP_VERSION, RRZE_PHP_VERSION, '<')) {
+    if (!is_php_version_compatible(RRZE_PHP_VERSION)) {
         $error = sprintf(
             /* translators: 1: Server PHP version number, 2: Required PHP version number. */
             __('The server is running PHP version %1$s. The Plugin requires at least PHP version %2$s.', 'rrze-base'),
-            PHP_VERSION,
+            $phpVersion,
             RRZE_PHP_VERSION
         );
-    } elseif (version_compare($GLOBALS['wp_version'], RRZE_WP_VERSION, '<')) {
+    } elseif (!is_wp_version_compatible(RRZE_WP_VERSION)) {
         $error = sprintf(
             /* translators: 1: Server WordPress version number, 2: Required WordPress version number. */
             __('The server is running WordPress version %1$s. The Plugin requires at least WordPress version %2$s.', 'rrze-base'),
-            $GLOBALS['wp_version'],
+            $wpVersion,
             RRZE_WP_VERSION
         );
     }
