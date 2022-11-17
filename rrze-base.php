@@ -17,8 +17,8 @@ namespace RRZE\Base;
 
 defined('ABSPATH') || exit;
 
-const RRZE_PHP_VERSION = '7.4';
-const RRZE_WP_VERSION  = '6.0';
+const RRZE_PHP_VERSION = '8.0';
+const RRZE_WP_VERSION  = '6.1';
 
 /**
  * Composer autoload
