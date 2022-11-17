@@ -15,6 +15,25 @@ class Main
      */
     public function __construct()
     {
-        //
+        //add_action('wp_enqueue_scripts', [$this, 'registerScripts']);
+    }
+
+    /**
+     * Registers a script to be enqueued later.
+     */
+    public function registerScripts()
+    {
+        wp_register_style(
+            'rrze-base',
+            plugins_url('css/rrze-base.css', plugin()->getBasename()),
+            [],
+            plugin()->getVersion(true)
+        );
+        wp_register_script(
+            'rrze-base',
+            plugins_url('js/rrze-base.js', plugin()->getBasename()),
+            ['jquery'],
+            plugin()->getVersion(true)
+        );
     }
 }
